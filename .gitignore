@@ -41,3 +41,16 @@ example
 # generated native folders
 /ios
 /android
+
+# Local source backups
+src-backup-*/
+
+# Local environment
+.env
+.env.local
+.env.*.local
+
+# Local SQLite files
+*.db
+*.db-shm
+*.db-wal
