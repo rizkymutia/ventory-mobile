@@ -10,7 +10,7 @@ export function Screen({ children }: { children: ReactNode }) {
   return <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}><ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>{children}</ScrollView></SafeAreaView>;
 }
 export function Header({ title, subtitle }: { title: string; subtitle: string }) {
-  return <View style={styles.header}><Text style={styles.eyebrow}>DAGANGIN</Text><Text style={styles.title}>{title}</Text><Text style={styles.subtitle}>{subtitle}</Text></View>;
+  return <View style={styles.header}><Text style={styles.eyebrow}>VENTORY</Text><Text style={styles.title}>{title}</Text><Text style={styles.subtitle}>{subtitle}</Text></View>;
 }
 export function SectionHeading({ title, note }: { title: string; note?: string }) {
   return <View style={styles.sectionHeading}><Text style={styles.sectionTitle}>{title}</Text>{note ? <Text style={styles.sectionNote}>{note}</Text> : null}</View>;

@@ -6,13 +6,13 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { useFocusEffect } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 
-import type { Product } from '../features/dagangin/database';
+import type { Product } from '../features/ventory/database';
 import {
   formatRupiah, formatSaleTime, listAvailableProducts, listSales,
   saveSale, type SaleHistory,
-} from '../features/dagangin/sales';
-import { Header, Screen, SectionHeading } from '../features/dagangin/screen';
-import { colors } from '../features/dagangin/theme';
+} from '../features/ventory/sales';
+import { Header, Screen, SectionHeading } from '../features/ventory/screen';
+import { colors } from '../features/ventory/theme';
 
 export default function SalesScreen() {
   const db = useSQLiteContext();
