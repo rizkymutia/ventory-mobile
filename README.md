@@ -1,6 +1,6 @@
 <div align="center">
 
-# dagangin.
+# Ventory.
 
 **Offline-first sales and inventory management for small businesses.**
 
@@ -18,7 +18,7 @@ A mobile-first point-of-sale (POS) and stock management app built with **Expo**,
 
 ## Overview
 
-**Dagangin** helps Indonesian micro and small business owners record sales, manage product stock, and see basic business performance without depending on an internet connection.
+**Ventory** helps Indonesian micro and small business owners record sales, manage product stock, and see basic business performance without depending on an internet connection.
 
 Instead of separating sales notes and inventory records, the app connects them: a completed sale is saved locally and its items are deducted from stock in the **same database transaction**.
 
@@ -44,7 +44,7 @@ Instead of separating sales notes and inventory records, the app connects them: 
 
 1. **Add products** with their names, prices, starting stock, and low-stock thresholds.
 2. **Create a sale** by choosing products and quantities.
-3. **Confirm checkout.** Dagangin verifies stock availability, saves the sale and its line items, and decreases inventory inside one SQLite transaction.
+3. **Confirm checkout.** Ventory verifies stock availability, saves the sale and its line items, and decreases inventory inside one SQLite transaction.
 4. **Review the dashboard.** Daily totals and stock warnings are recalculated from stored records whenever the dashboard is opened.
 
 For example, selling 2 units of an item priced at Rp75,000 each, with a purchase cost of Rp60,000, records **Rp150,000 revenue**, **Rp30,000 gross profit**, and a **2-unit stock deduction**.
@@ -112,7 +112,7 @@ src/
 │   ├── app-tabs.tsx        # Native tab navigation
 │   └── app-tabs.web.tsx    # Web-specific tab implementation
 └── features/
-    └── dagangin/
+    └── Ventory/
         ├── database.ts     # SQLite schema and initialization
         ├── sales.ts        # Sales, stock updates, and summary queries
         ├── screen.tsx      # Shared screen components
