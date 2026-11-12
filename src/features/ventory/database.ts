@@ -52,5 +52,18 @@ export async function initializeDatabase(db: SQLiteDatabase): Promise<void> {
 
     CREATE INDEX IF NOT EXISTS idx_sales_created_at ON sales(created_at);
     CREATE INDEX IF NOT EXISTS idx_sale_items_sale_id ON sale_items(sale_id);
+
+    -- Pengeluaran operasional, bukan pembelian barang dagangan (HPP).
+    CREATE TABLE IF NOT EXISTS expenses (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      category TEXT NOT NULL CHECK(length(trim(category)) > 0),
+      amount INTEGER NOT NULL CHECK(amount > 0),
+      note TEXT NOT NULL DEFAULT '',
+      expense_date TEXT NOT NULL CHECK(length(expense_date) = 10),
+      created_at INTEGER NOT NULL,
+      updated_at INTEGER NOT NULL
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_expenses_date ON expenses(expense_date);
   `);
 }
