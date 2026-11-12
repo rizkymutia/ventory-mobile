@@ -4,35 +4,39 @@
     "slug": "ventory-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/ventory/icon.png",
     "scheme": "ventory",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon",
+      "icon": "./assets/ventory/icon.png",
       "bundleIdentifier": "com.rizkymutia.ventory"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#113D31",
+        "foregroundImage": "./assets/ventory/android-icon-foreground.png",
+        "monochromeImage": "./assets/ventory/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.rizkymutia.ventory"
+      "package": "com.rizkymutia.ventory",
+      "icon": "./assets/ventory/icon.png"
     },
     "web": {
       "output": "server",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/ventory/favicon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "backgroundColor": "#F4F7F2",
+          "image": "./assets/ventory/splash-icon.png",
+          "imageWidth": 240,
+          "dark": {
+            "image": "./assets/ventory/splash-icon-dark.png",
+            "backgroundColor": "#103D31"
+          }
         }
       ],
       "expo-sqlite",
