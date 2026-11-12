@@ -5,7 +5,7 @@ import { SQLiteProvider } from "expo-sqlite";
 
 import { AnimatedSplashOverlay } from "@/components/animated-icon";
 import AppTabs from "@/components/app-tabs";
-import { initializeDatabase } from "../features/dagangin/database";
+import { initializeDatabase } from "../features/ventory/database";
 
 SplashScreen.preventAutoHideAsync();
 

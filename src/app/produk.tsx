@@ -4,8 +4,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { useFocusEffect } from "expo-router";
 import { useSQLiteContext } from "expo-sqlite";
 
-import { Header, Screen } from "../features/dagangin/screen";
-import type { Product } from "../features/dagangin/database";
+import { Header, Screen } from "../features/ventory/screen";
+import type { Product } from "../features/ventory/database";
 
 type ProductForm = {
   name: string;
