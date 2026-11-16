@@ -1,3 +1,4 @@
+import { toUserFacingMessage } from './error-message';
 import { useCallback, useState } from 'react';
 import { Alert, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -18,7 +19,7 @@ import {
 } from './backup';
 
 const message = (error: unknown): string =>
-  error instanceof Error ? error.message : 'Terjadi kesalahan tak dikenal.';
+  toUserFacingMessage(error, 'backup');
 
 export function BackupRestorePanel() {
   const db = useSQLiteContext();

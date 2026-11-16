@@ -54,3 +54,7 @@ src-backup-*/
 *.db
 *.db-shm
 *.db-wal
+
+# Locally exported Ventory user data; never commit backups
+ventory-backup-*.json
+ventory-before-restore-*.json
