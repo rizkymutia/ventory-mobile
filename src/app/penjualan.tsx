@@ -1,3 +1,4 @@
+import { toUserFacingMessage } from '../features/ventory/error-message';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import {
   Alert, Platform, Pressable, StyleSheet, Text, TextInput, View,
@@ -84,7 +85,7 @@ export default function SalesScreen() {
       Alert.alert('Penjualan tersimpan', `Transaksi #${id} berhasil. Stok sudah diperbarui.`);
     } catch (err) {
       console.error(err);
-      Alert.alert('Transaksi dibatalkan', err instanceof Error ? err.message : 'Gagal menyimpan penjualan.');
+      Alert.alert('Transaksi dibatalkan', toUserFacingMessage(err, 'sale'));
       // Bila satu item gagal, semua UPDATE stok dan INSERT penjualan di-rollback.
       await refresh();
     } finally {

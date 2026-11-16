@@ -1,3 +1,4 @@
+import { toUserFacingMessage } from '../features/ventory/error-message';
 import { useCallback, useRef, useState } from 'react';
 import {
   Alert, KeyboardAvoidingView, Modal, Platform, Pressable,
@@ -180,7 +181,7 @@ export default function ReportsScreen() {
       await refresh();
     } catch (err) {
       console.error(err);
-      Alert.alert('Gagal menyimpan', err instanceof Error ? err.message : 'Pengeluaran gagal disimpan.');
+      Alert.alert('Gagal menyimpan', toUserFacingMessage(err, 'expense'));
     } finally {
       savingRef.current = false;
       setSaving(false);
